@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Tommy Gunnarsson</title>
 
     <!-- Bootstrap -->
@@ -27,14 +26,16 @@
 
             <div id="navbar" class="navbar-collapse collapse">
             	<ul class="nav navbar-nav">
-					<li class="active"><a href="#">Home</a></li>
-                	<li><a href="#cirrculum">Cirrculum Vitae</a></li>
+      					<li class="active"><a href="#">Home</a></li>
+                <li><a href="#cirrculum">Cirrculum Vitae</a></li>
+                <li><a href="#letter">Personal Letter</a></li>
+                <li><a href="#letter">References</a></li>
             		<li class="dropdown">
                   		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About Me<span class="caret"></span></a>
                   		<ul class="dropdown-menu">
                     	<li><a href="#contact">Contact Me</a></li>
-                    	<li><a href="#about">About Me</a></li>
-                    	<li><a href="#other">Other</a></li>
+                    	<li><a href="#pages/about">About Me</a></li>
+                      <li><a href="#about">Say something!</a></li>
                   	</ul>
                 	</li>
             	</ul> <!-- nav navbar-nav -->
@@ -46,20 +47,45 @@
 	<!-- MAIN CONTENT -->
 	<div class="container content">
 		<div class="main-content">
-			<h2>Hello</h2>
-			<p>
-			Hello world, this is my webpage!
-			</p>
+      
+      <div class="panel-group" id="accordion">
+        <!-- FIRST PANEL -->
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Collapsible Group 1</a>
+            </h4>
+          </div> <!-- panel-heading-->
+          <div id="collapse1" class="panel-collapse collapse">
+            <div class="panel-body">My work experience.
+            </div> <!-- panel-body-->
+          </div> <!-- collapse1-->
+        </div> <!-- panel panel-default-->
+        
+        <!-- SECOND PANEL -->
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Collapsible Group 1</a>
+            </h4>
+          </div> <!-- panel-heading-->
+          <div id="collapse2" class="panel-collapse collapse">
+            <div class="panel-body">My work experience.
+            </div> <!-- panel-body-->
+          </div> <!-- collapse1-->
+        </div> <!-- panel panel-default-->
+
+      </div> <!-- panel-group accordion-->
+
 		</div> <!-- main-content-->
 	</div> <!-- container content-->
 
-
-    <!-- Bootstrap stuff -->
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-    <!-- Latest compiled and minified CSS -->
+  <!-- Bootstrap stuff -->
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.min.js"></script>
+  <!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
