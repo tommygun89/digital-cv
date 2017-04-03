@@ -10,16 +10,19 @@ function canRunFileAPI() {
 }
 
 function getAsCollapsible(title, content) {
-	// Return the content of one collapsible, e.g. one header and its content
+	var collapsible = document.getElementById('collapsible-group').innerHtml;
+	collapsible.replace("TITLE", title);
+	collapsible.replace("CONTENT", content);
+	return collapsible;
 }
 
 function getAllCollapsibles(fileContent) {
-	// Return entire collapsible content, e.g. all headers as collapsibles
-}
-
-function displayCV() {
-	var el document.getElementById('cv-collapsible');
-	el.innerHtml = readCVFile();
+	var collapsibles = "";
+	// Find headers -> make as title
+	// Find content, including points, lists etc -> make as content
+	// call getAsCollapsible for each title
+	// append to collapsibles
+	// Return collapsibles
 }
 
 function readCVFile() {
@@ -47,4 +50,9 @@ function readCVFile() {
 	}
 
 	return getAllCollapsibles(fileContent);
+}
+
+function displayCV() {
+	var el document.getElementById('cv-collapsible');
+	el.innerHtml = readCVFile();
 }

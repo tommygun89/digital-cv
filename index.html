@@ -47,38 +47,28 @@
 	<!-- MAIN CONTENT -->
 	<div class="container content">
 		<div class="main-content">
-      <!-- Read CV -->
       <div class="panel-group" id="cv-collapsible">
-      <script type="text/javascript">
-        
-      </script>
-        <!-- FIRST PANEL -->
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title">
-              <a data-toggle="collapse" data-parent="#cv-collapsible" href="#collapse1">Collapsible Group 1</a>
-            </h4>
-          </div> <!-- panel-heading-->
-          <div id="collapse1" class="panel-collapse collapse">
-            <div class="panel-body">My work experience.
-            </div> <!-- panel-body-->
-          </div> <!-- collapse1-->
-        </div> <!-- panel panel-default-->
-        
-        <!-- SECOND PANEL -->
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title">
-              <a data-toggle="collapse" data-parent="#cv-collapsible" href="#collapse2">Collapsible Group 1</a>
-            </h4>
-          </div> <!-- panel-heading-->
-          <div id="collapse2" class="panel-collapse collapse">
-            <div class="panel-body">My work experience.
-            </div> <!-- panel-body-->
-          </div> <!-- collapse1-->
-        </div> <!-- panel panel-default-->
+        <!-- This field is just to keep the collapsible format and make it
+             accessible to cv.js in js runtime -->
+        <script id="collapsible-group" type="text/javascript">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#cv-collapsible" href="#collapse1"> TITLE </a>
+              </h4>
+            </div>
+            <div id="collapse1" class="panel-collapse collapse"> CONTENT
+              <div class="panel-body">
+              </div>
+            </div>
+          </div>
+        </script>
 
-      </div> <!-- panel-group accordion-->
+        <!-- Read CV -->
+        <script type="text/javascript" src="js/cv.js">
+          displayCV();
+        </script>
+      </div> <!-- panel-group -->
 
 		</div> <!-- main-content-->
 	</div> <!-- container content-->
