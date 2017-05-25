@@ -34,14 +34,12 @@ function updateDivContent(fileContent) {
 
 function getCvAsCollapsibles(file) {
 	alert(file);
-	var rawFile = new XMLHttpRequest();
-	rawFile.onreadystatechange = function() {
-		if (rawFile.readyState == XMLHttpRequest.DONE && rawFile.status == 0) {
-			alert(rawFile.getAllResponseHeaders());
-			fileContent = rawFile.response;
-			updateDivContent(fileContent);
-		};
+	var reader = new FileReader();
+	reader.onload = function() {
+		if (reader.readyState === FileReader.DONE) {
+			updateDivContent(reader.result);
+		}
 	};
-	rawFile.open("GET", file, true);
-	rawFile.send();
+	alert("sup");
+	reader.readAsText(file);
 }
