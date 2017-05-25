@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Tommy Gunnarsson</title>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="cv.js" type="text/javascript"></script>
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
   </head>
@@ -44,12 +45,12 @@
 		</div> <!-- container -->
 	</div> <!-- navbar-wrapper -->
 
-	<!-- MAIN CONTENT -->
-	<div class="container content">
-		<div class="main-content">
+  <!-- MAIN CONTENT -->
+  <div class="container content">
+    <div class="main-content">
       <div class="panel-group" id="cv-collapsible">
         <!-- This field is just to keep the collapsible format and make it
-             accessible to cv.js in js runtime -->
+             accessible for cv.js -->
         <script id="collapsible-group" type="text/javascript">
           <div class="panel panel-default">
             <div class="panel-heading">
@@ -64,14 +65,16 @@
           </div>
         </script>
 
-        <!-- Read CV -->
-        <script type="text/javascript" src="js/cv.js">
-          displayCV();
+        <script type="text/javascript">
+          getCvAsCollapsibles('file:///C:/Users/Tommy/Documents/repo/digital-cv/cv-eng-tommy_gunnarsson.txt');
         </script>
+
+        <div id="built-cv-collapsibles">
+        </div>
       </div> <!-- panel-group -->
 
-		</div> <!-- main-content-->
-	</div> <!-- container content-->
+    </div> <!-- main-content-->
+  </div> <!-- container content-->
 
   <!-- Bootstrap stuff -->
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
