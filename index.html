@@ -55,24 +55,29 @@
           <div class="panel panel-default">
             <div class="panel-heading">
               <h4 class="panel-title">
-                <a data-toggle="collapse" data-parent="#cv-collapsible" href="#collapse1"> TITLE </a>
+                <a data-toggle="collapse" data-parent="#cv-collapsible" href="#collapsibleINDEX"> TITLE </a>
               </h4>
             </div>
-            <div id="collapse1" class="panel-collapse collapse"> CONTENT
-              <div class="panel-body">
-              </div>
+            <div id="collapsibleINDEX" class="panel-collapse collapse">
+              <div class="panel-body"> CONTENT </div>
             </div>
           </div>
         </script>
 
-        <script type="text/javascript">
-          getCvAsCollapsibles('file:///C:/Users/Tommy/Documents/repo/digital-cv/cv-eng-tommy_gunnarsson.txt');
-        </script>
+        <div>
+    			Select a text file:
+    			<input type="file" id="fileInput">
+    		</div>
 
-        <div id="built-cv-collapsibles">
+        <div id="built">
         </div>
-      </div> <!-- panel-group -->
 
+        <script type="text/javascript">
+        window.onload = function() {
+          getCvAsCollapsibles();
+        };
+        </script>
+      </div> <!-- panel-group -->
     </div> <!-- main-content-->
   </div> <!-- container content-->
 
