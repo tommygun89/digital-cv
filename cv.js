@@ -15,6 +15,16 @@ function formatContent(content) {
 	return content;
 }
 
+function getDiv(lines, start) {
+	var title = "";
+	for (var lineNr = start; lineNr < lines.length; ++lineNr) {
+		title += lines[lineNr];
+		if (lines[lineNr].search("</div>") != -1) {
+			return title;
+		}
+	}
+}
+
 function getAllCollapsibles(fileContent) {
 	var collapsibles = "";
 	var title = "";
@@ -23,22 +33,17 @@ function getAllCollapsibles(fileContent) {
 	var lines = fileContent.split("\n");
 
 	for (var lineNr = 0; lineNr < lines.length; ++lineNr) {
-		if (lines[lineNr].substr(0, 1) == "H") {
+		if (lines[lineNr].search("collapsible-title") != -1) {
 			++headingIndex;
-			title = lines[lineNr].substr(2);
-		}
-		else if (lines[lineNr].substr(0, 1) == "B") {
-			content += lines[lineNr].substr(2);
-		}
-		else if (lines[lineNr].substr(0, 1) == "E") {
-			collapsibles += buildCollapsible(formatTitle(title),
-													formatContent(content),
-													headingIndex);
+			title = getDiv(lines, lineNr);
+		} /* TODO Ends before entire content is parsed, due to exiting at the first </div>, must parse all under the title*/
+		else if (lines[lineNr].search("collapsible-body") != -1) {
+			content = getDiv(lines, lineNr);
+ 			collapsibles += buildCollapsible(title, content, headingIndex);
 			title = "";
 			content = "";
 		}
 	}
-	alert(collapsibles);
 	return collapsibles;
 }
 
